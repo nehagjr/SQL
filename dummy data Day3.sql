@@ -1,5 +1,6 @@
 use dummy;
 
+
 select * from customers;
 select employeeNumber,firstName,lastName,jobTitle from employees;
 
