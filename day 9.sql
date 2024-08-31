@@ -8,7 +8,6 @@ delete from orders where id=5;
 
 #creating variable here ...here @ define it is an user define variable
 set @num=0;
-
 update orders set id=@num:=@num+1;
 set sql_safe_updates=0;
 
