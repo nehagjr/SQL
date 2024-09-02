@@ -13,4 +13,4 @@ select o.orderNumber, status, (quantityOrdered*priceEach) as total_sales  from
 orders  o
 inner join
 orderdetails od
-where o.orderNumber =od.orderNumber;
+on o.orderNumber =od.orderNumber;
