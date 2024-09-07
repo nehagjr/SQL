@@ -14,7 +14,7 @@ insert into family (memberid,name,age,parent_id) values
 ('F7','rohan',6,'F4'),
 ('F8','asha',8,'F4');
 
-select f.name, f.age ,f1.name, f1.age from 
+select f1.name, f1.age ,f.name, f.age from 
 family f
 inner join 
 family f1 
