@@ -33,3 +33,34 @@ select ltrim("         Cybrom            tech              ") as nm;
 
 -- rtrim 
 select rtrim("         Cybrom            tech              ") as nm;
+
+# left (string, no of char)
+# right (string, no of char)
+# substring (string, position , no of char)
+
+
+-- to return the first 50 char of the product desc
+-- to find the customer nm starts with vowle
+-- to find the customer nm ends with vowel
+-- to find the employee full nm starts with vowel and end with vowel
+
+select  productDescription from products where left(productDescription , 50);
+
+select customerName from customers where left(customerName,1) in ("a","e","i","o","u");
+    
+select customerName from customers where right(customerName,1) in ("a","e","i","o","u");
+
+select concat_ws(" ",firstName,lastName) as FullNm from employees where left(firstName,1) in ("a","e","i","o","u") and right(lastName,1) in ("a","e","i","o","u");
+
+select concat_ws(" ",firstName,lastName) as FullNm from employees where substr(firstName,1,1) in ("a","e","i","o","u") and substr(lastName,-1,1) in ("a","e","i","o","u");
+
+select instr("hiii i am neha"," i ");
+
+-- to find the product whose nm contains car keyword 
+-- to find the product nm contains 1900  
+
+select productName from products where instr(productName,"car");
+select productName from products where productName like "%car%";
+
+select productName from products where instr(productName,"1900");
+select productName from products where productName like "%1900%";
